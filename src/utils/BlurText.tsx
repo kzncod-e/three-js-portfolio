@@ -57,7 +57,12 @@ const SplitText: React.FC<SplitTextProps> = ({
     letters.map((_, i) => ({
       from: animationFrom,
       to: inView
-        ? async (next: (props: any) => Promise<void>) => {
+        ? async (
+            next: (props: {
+              opacity: number;
+              transform: string;
+            }) => Promise<void>
+          ) => {
             await next(animationTo);
             animatedCount.current += 1;
             if (
@@ -69,7 +74,9 @@ const SplitText: React.FC<SplitTextProps> = ({
           }
         : animationFrom,
       delay: i * delay,
-      config: { easing },
+      config: {
+        easing: typeof easing === "function" ? easing : (t: number) => t,
+      },
     }))
   );
 
@@ -90,7 +97,7 @@ const SplitText: React.FC<SplitTextProps> = ({
             return (
               <animated.span
                 key={index}
-                style={springs[index] as unknown as React.CSSProperties}
+                style={springs[index]}
                 className="inline-block transform transition-opacity will-change-transform">
                 {letter}
               </animated.span>
