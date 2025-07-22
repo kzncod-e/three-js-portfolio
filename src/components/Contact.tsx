@@ -6,7 +6,7 @@ import { styles } from "../styles/style";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-import { error } from "console";
+// import { error } from "console";
 // Djb_Kug4V67NlRoZW;
 // service_v622yjm
 //template_4aw7hei
@@ -18,11 +18,11 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  interface FormState {
-    name: string;
-    email: string;
-    message: string;
-  }
+  // interface FormState {
+  //   name: string;
+  //   email: string;
+  //   message: string;
+  // }
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
