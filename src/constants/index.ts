@@ -216,7 +216,7 @@ const projects = [
       },
     ],
     image: editor,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/kzncod-e/livedocs",
   },
   {
     name: "Project manager",
@@ -237,7 +237,7 @@ const projects = [
       },
     ],
     image: edlis,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/kzncod-e/task-manager-app",
   },
   {
     name: "eco traveler",
@@ -258,7 +258,7 @@ const projects = [
       },
     ],
     image: eco,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/EcoTraveler/eco-traveler",
   },
 ];
 
