@@ -11,6 +11,7 @@ import {
   StarsCanvas,
 } from "./components";
 import useStore from "./store";
+import Geometry from "./components/canvas/Geometry";
 function App() {
   const { activeSection, setActiveSection } = useStore();
   return (
@@ -19,10 +20,7 @@ function App() {
         <div className="relative z-0 bg-primary">
           <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
             <Navbar />
-            <Hero
-              activeSection={activeSection}
-              setActiveSection={setActiveSection}
-            />
+            <Geometry />
           </div>
           <About />
           <Experience />
